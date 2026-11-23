@@ -1,0 +1,14 @@
+export type Category='road_damage'|'garbage_sanitation'|'streetlight_electrical'|'water_supply'|'drainage_flooding'|'other';
+export const CATEGORIES:Category[]=['road_damage','garbage_sanitation','streetlight_electrical','water_supply','drainage_flooding','other'];
+export const CATEGORY_LABELS:Record<Category,string>={road_damage:'Road & Pavement Damage',garbage_sanitation:'Garbage & Sanitation',streetlight_electrical:'Streetlight & Electrical',water_supply:'Water Supply & Leakage',drainage_flooding:'Drainage & Flooding',other:'Other Municipal Issue'};
+export const CATEGORY_DEPARTMENTS:Record<Category,string>={road_damage:'Public Works',garbage_sanitation:'Sanitation & Waste Management',streetlight_electrical:'Electricity Board',water_supply:'Water Supply & Sewerage Board',drainage_flooding:'Stormwater Drainage Department',other:'General Administration'};
+export const DEPARTMENTS=Object.values(CATEGORY_DEPARTMENTS);
+export type Severity='Low'|'Medium'|'High'|'Critical';export const SEVERITIES:Severity[]=['Low','Medium','High','Critical'];
+export const PRIORITIES=['low','medium','high','critical'];
+export type IncidentStatus='open'|'triaged'|'assigned'|'in_progress'|'resolved'|'closed';
+export const STATUSES:IncidentStatus[]=['open','triaged','assigned','in_progress','resolved','closed'];
+export type UserRole='Citizen'|'Admin'|'Department';
+export const FACTORS:Record<string,[string,number]>={S:['Severity',.4],R:['Report volume',.2],T:['Time open',.15],L:['Sensitive location',.15],E:['Escalation',.1]};
+export const DEFAULT_CENTER:[number,number]=[28.4506,77.5842];
+export const fmt=(d:string)=>new Date(d).toLocaleString('en-IN',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+export const dist=(a:any,b:any)=>{const r=(x:number)=>x*Math.PI/180,h=Math.sin(r(b.latitude-a.latitude)/2)**2+Math.cos(r(a.latitude))*Math.cos(r(b.latitude))*Math.sin(r(b.longitude-a.longitude)/2)**2;return Math.round(12742000*Math.asin(Math.sqrt(h)))};

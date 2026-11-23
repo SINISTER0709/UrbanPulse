@@ -1,0 +1,4 @@
+import {Link} from 'react-router-dom';import {useAlerts} from '../components/Notifications';import {SevPill} from '../components/ui';
+export default function Alerts(){const [A]=useAlerts();return <div className="max-w-3xl space-y-4"><div><h1 className="text-2xl font-bold">Alerts</h1><p className="text-sm text-slate-500">Items that need action right now.</p></div>
+<div className="space-y-2 stagger">{A.map(a=><Link key={a.id} to={'/admin/map/'+a.inc.id} className="card p-4 flex items-center gap-3 hover:border-brand"><span className={`w-10 h-10 rounded-lg grid place-items-center shrink-0 ${a.tone}`}><a.icon size={18}/></span><div className="flex-1 min-w-0"><p className="font-semibold text-sm">{a.kind}</p><p className="text-xs text-slate-500 truncate">{a.inc.id} · {a.inc.summary_text}</p></div><SevPill v={a.inc.severity}/></Link>)}</div>
+{!A.length&&<p className="text-sm text-slate-500">No alerts. Everything is on track.</p>}</div>}

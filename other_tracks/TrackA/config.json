@@ -1,0 +1,10 @@
+{
+  "category_department_map": {
+    "road_damage": "Public Works",
+    "garbage_sanitation": "Sanitation & Solid Waste",
+    "streetlight_electrical": "Electrical & Street Lighting",
+    "water_supply": "Water Supply Department",
+    "drainage_flooding": "Stormwater & Drainage",
+    "other": "General Municipal Desk"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "model_tag": "v1_finetuned_zeroshot",
+  "accuracy": 0.9514,
+  "macro_f1": 0.9509,
+  "json_validity_rate": 1.0,
+  "other_fallback_rate": 0.0,
+  "per_class": {
+    "road_damage": {
+      "precision": 0.9091,
+      "recall": 0.8333,
+      "f1": 0.8696,
+      "support": 24
+    },
+    "garbage_sanitation": {
+      "precision": 1.0,
+      "recall": 0.9583,
+      "f1": 0.9787,
+      "support": 24
+    },
+    "streetlight_electrical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 24
+    },
+    "water_supply": {
+      "precision": 0.96,
+      "recall": 1.0,
+      "f1": 0.9796,
+      "support": 24
+    },
+    "drainage_flooding": {
+      "precision": 0.96,
+      "recall": 1.0,
+      "f1": 0.9796,
+      "support": 24
+    },
+    "other": {
+      "precision": 0.88,
+      "recall": 0.9167,
+      "f1": 0.898,
+      "support": 24
+    }
+  },
+  "confusion_matrix_labels": [
+    "road_damage",
+    "garbage_sanitation",
+    "streetlight_electrical",
+    "water_supply",
+    "drainage_flooding",
+    "other"
+  ],
+  "confusion_matrix": [
+    [
+      20,
+      0,
+      0,
+      1,
+      1,
+      2
+    ],
+    [
+      0,
+      23,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      24,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      24,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      24,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      22
+    ]
+  ],
+  "num_errors": 7,
+  "errors": [
+    {
+      "id": "CMP_0836",
+      "true": "road_damage",
+      "pred": "drainage_flooding",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"drainage_flooding\"}",
+      "text": "Culvert bridge on the main highway caved in completely leaving a huge chasm across both lanes with zero barricades."
+    },
+    {
+      "id": "CMP_0841",
+      "true": "other",
+      "pred": "road_damage",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"road_damage\"}",
+      "text": "Rusted overhead metallic welcome arch spanning Station Road has sheared welds on one leg and is sagging over passing buses."
+    },
+    {
+      "id": "CMP_0863",
+      "true": "road_damage",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "Divider bollard paint scraped and one plastic cone missing near the quiet T-point."
+    },
+    {
+      "id": "CMP_0892",
+      "true": "other",
+      "pred": "road_damage",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"road_damage\"}",
+      "text": "Heavy concrete overhead welcome arch at the entrance of Gandhi Bazaar just fractured at both columns and is visibly tilting over rush-hour traffic!"
+    },
+    {
+      "id": "CMP_0926",
+      "true": "road_damage",
+      "pred": "water_supply",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"water_supply\"}",
+      "text": "Badly patched utility trench runs diagonally across the T-junction and has started sinking again."
+    },
+    {
+      "id": "CMP_0931",
+      "true": "road_damage",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "Paint markings for zebra crossing outside the post office are almost worn out."
+    },
+    {
+      "id": "CMP_0941",
+      "true": "garbage_sanitation",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "Wind blew some polythene bags against the chain-link fence of the community playground."
+    }
+  ]
+}

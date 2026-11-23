@@ -1,0 +1,293 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "max_distance_meters": 250,
+  "time_window_days": 14,
+  "num_pairs": 160,
+  "best_review_threshold": {
+    "threshold": 0.5,
+    "precision": 1.0,
+    "recall": 0.8125,
+    "f1": 0.8966,
+    "tp": 65,
+    "fp": 0,
+    "fn": 15,
+    "tn": 80,
+    "false_merge_rate": 0.0
+  },
+  "recommended_high_confidence_threshold": 0.5,
+  "sweep": [
+    {
+      "threshold": 0.5,
+      "precision": 1.0,
+      "recall": 0.8125,
+      "f1": 0.8966,
+      "tp": 65,
+      "fp": 0,
+      "fn": 15,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.55,
+      "precision": 1.0,
+      "recall": 0.5875,
+      "f1": 0.7402,
+      "tp": 47,
+      "fp": 0,
+      "fn": 33,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.6,
+      "precision": 1.0,
+      "recall": 0.35,
+      "f1": 0.5185,
+      "tp": 28,
+      "fp": 0,
+      "fn": 52,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.65,
+      "precision": 1.0,
+      "recall": 0.225,
+      "f1": 0.3673,
+      "tp": 18,
+      "fp": 0,
+      "fn": 62,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.68,
+      "precision": 1.0,
+      "recall": 0.1125,
+      "f1": 0.2022,
+      "tp": 9,
+      "fp": 0,
+      "fn": 71,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.7,
+      "precision": 1.0,
+      "recall": 0.0875,
+      "f1": 0.1609,
+      "tp": 7,
+      "fp": 0,
+      "fn": 73,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.72,
+      "precision": 1.0,
+      "recall": 0.05,
+      "f1": 0.0952,
+      "tp": 4,
+      "fp": 0,
+      "fn": 76,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.75,
+      "precision": 1.0,
+      "recall": 0.0375,
+      "f1": 0.0723,
+      "tp": 3,
+      "fp": 0,
+      "fn": 77,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.78,
+      "precision": 1.0,
+      "recall": 0.025,
+      "f1": 0.0488,
+      "tp": 2,
+      "fp": 0,
+      "fn": 78,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 80,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    },
+    {
+      "threshold": 0.85,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 80,
+      "tn": 80,
+      "false_merge_rate": 0.0
+    }
+  ],
+  "errors": [
+    {
+      "pair_id": "PAIR_001",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.3393,
+      "distance_m": 22.0,
+      "time_diff_days": 4.3,
+      "text_a": "Sunken cast-iron manhole lid sitting 4 inches deep on Techzone avenue pooling murky runoff.",
+      "text_b": "Depressed sewer chamber cover on Techzone road collecting gutter water and jolting scooters."
+    },
+    {
+      "pair_id": "PAIR_018",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "typo_and_paraphrase",
+      "cosine_sim": 0.3687,
+      "distance_m": 120.0,
+      "time_diff_days": 2.2,
+      "text_a": "garbge van nt coming to Alpha 1 block C for 5 days bins overflowing outside gates",
+      "text_b": "No door to door waste pickup in Alpha 1 C-block all week, household trash piling up."
+    },
+    {
+      "pair_id": "PAIR_025",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.4492,
+      "distance_m": 42.0,
+      "time_diff_days": 2.0,
+      "text_a": "Unmarked high speed breaker outside DPS Greater Noida scraping car bottoms.",
+      "text_b": "Oversized cement speed bump near DPS school gate hitting undersides of sedans."
+    },
+    {
+      "pair_id": "PAIR_036",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "typo_and_paraphrase",
+      "cosine_sim": 0.3942,
+      "distance_m": 18.0,
+      "time_diff_days": 0.3,
+      "text_a": "Uncovered deep sewer manhole in middle of Alpha Commercial road, bikes barely missing it!",
+      "text_b": "manhol cover missing on main Alpha market lane dark pit open very dangerous"
+    },
+    {
+      "pair_id": "PAIR_037",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.301,
+      "distance_m": 19.0,
+      "time_diff_days": 3.1,
+      "text_a": "Open feeder pillar box with bare live switches exposed on footpath near Knowledge Park.",
+      "text_b": "Missing door on electrical junction cabinet along KP walkway leaving live busbars open."
+    },
+    {
+      "pair_id": "PAIR_061",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.4469,
+      "distance_m": 59.9,
+      "time_diff_days": 1.7,
+      "text_a": "Low-hanging live service cable sagging across lane brushing van roofs in Techzone.",
+      "text_b": "Overhead electric wire drooping dangerously low over Techzone connector road."
+    },
+    {
+      "pair_id": "PAIR_069",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.4643,
+      "distance_m": 50.1,
+      "time_diff_days": 1.8,
+      "text_a": "Exposed iron rods sticking out of cracked road slab near Knowledge Park II metro.",
+      "text_b": "Rusted steel rebar poking from broken cement road by KP-2 station puncturing tyres."
+    },
+    {
+      "pair_id": "PAIR_085",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.3856,
+      "distance_m": 22.0,
+      "time_diff_days": 0.5,
+      "text_a": "Pedestrian felt electric shock touching wet iron lamp pole near Alpha Commercial Belt.",
+      "text_b": "Current leaking into metal streetlight post outside Alpha market after rain."
+    },
+    {
+      "pair_id": "PAIR_088",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_mid",
+      "cosine_sim": 0.4564,
+      "distance_m": 95.0,
+      "time_diff_days": 1.8,
+      "text_a": "Broken municipal water booster motor left GIMS staff quarters dry since Tuesday.",
+      "text_b": "No water pressure reaching GIMS residential wing after booster pump failed."
+    },
+    {
+      "pair_id": "PAIR_113",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.481,
+      "distance_m": 45.0,
+      "time_diff_days": 1.0,
+      "text_a": "Broken divider kerb stones scattered into fast lane near GIMS hospital chowk.",
+      "text_b": "Shattered median concrete blocks jutting onto carriageway outside GIMS junction."
+    },
+    {
+      "pair_id": "PAIR_116",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.3446,
+      "distance_m": 42.0,
+      "time_diff_days": 0.2,
+      "text_a": "Huge uprooted banyan tree fell across both lanes of Yatharth Hospital road blocking traffic.",
+      "text_b": "Massive fallen tree trunk sealing Hospital Avenue completely, no power lines involved."
+    },
+    {
+      "pair_id": "PAIR_122",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.4834,
+      "distance_m": 29.9,
+      "time_diff_days": 0.3,
+      "text_a": "Large swarm of agitated honeybees near Alpha 1 foot overbridge stinging commuters.",
+      "text_b": "Disturbed beehive under Alpha 1 pedestrian bridge attacking walkers crossing the span."
+    },
+    {
+      "pair_id": "PAIR_126",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "typo_and_paraphrase",
+      "cosine_sim": 0.4619,
+      "distance_m": 72.0,
+      "time_diff_days": 0.9,
+      "text_a": "Deep jagged pothole right after blind curve on Knowledge Park service lane.",
+      "text_b": "huge crater hidden past the bend on KP service road two bikers skidded"
+    },
+    {
+      "pair_id": "PAIR_149",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "typo_and_paraphrase",
+      "cosine_sim": 0.4964,
+      "distance_m": 30.0,
+      "time_diff_days": 0.8,
+      "text_a": "pothol cluster near Yatharth hospital ambulance turn slowing emergency vans",
+      "text_b": "Multiple deep craters outside Yatharth Hospital entrance delaying ambulances."
+    },
+    {
+      "pair_id": "PAIR_157",
+      "error_type": "MISSED_DUP (FN)",
+      "pair_type": "paraphrase_close",
+      "cosine_sim": 0.3616,
+      "distance_m": 45.0,
+      "time_diff_days": 2.0,
+      "text_a": "Stagnant black gutter water sitting for four days in blocked drain beside DPS school wall.",
+      "text_b": "Choked roadside nali outside DPS boundary holding foul stagnant water breeding mosquitoes."
+    }
+  ]
+}

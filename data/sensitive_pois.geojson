@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_01", "name": "ABC School", "poi_type": "school_access"},
+      "geometry": {"type": "Point", "coordinates": [77.5842, 28.4506]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_02", "name": "Bennett University Main Gate", "poi_type": "school_access"},
+      "geometry": {"type": "Point", "coordinates": [77.5858, 28.4501]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_03", "name": "Yatharth Super Speciality Hospital", "poi_type": "hospital_access"},
+      "geometry": {"type": "Point", "coordinates": [77.5150, 28.4655]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_04", "name": "Sharda Hospital", "poi_type": "hospital_access"},
+      "geometry": {"type": "Point", "coordinates": [77.4820, 28.4730]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_05", "name": "GIMS Government Hospital", "poi_type": "hospital_access"},
+      "geometry": {"type": "Point", "coordinates": [77.5270, 28.4368]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_06", "name": "Pari Chowk Metro & Bus Hub", "poi_type": "transit_hub"},
+      "geometry": {"type": "Point", "coordinates": [77.5103, 28.4651]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_07", "name": "Knowledge Park II Metro Station", "poi_type": "transit_hub"},
+      "geometry": {"type": "Point", "coordinates": [77.5002, 28.4570]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_08", "name": "Alpha 1 Metro Station", "poi_type": "transit_hub"},
+      "geometry": {"type": "Point", "coordinates": [77.5126, 28.4787]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_09", "name": "Alpha Commercial Belt Market", "poi_type": "market_arterial"},
+      "geometry": {"type": "Point", "coordinates": [77.5138, 28.4742]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_10", "name": "Jagat Farm Market", "poi_type": "market_arterial"},
+      "geometry": {"type": "Point", "coordinates": [77.5054, 28.4810]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_11", "name": "DPS Greater Noida", "poi_type": "school_access"},
+      "geometry": {"type": "Point", "coordinates": [77.5194, 28.4862]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": "poi_12", "name": "Depot Metro Station", "poi_type": "transit_hub"},
+      "geometry": {"type": "Point", "coordinates": [77.5446, 28.4889]}
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "model_tag": "v0_baseline_fewshot",
+  "accuracy": 0.8819,
+  "macro_f1": 0.882,
+  "json_validity_rate": 0.9861,
+  "other_fallback_rate": 0.0139,
+  "per_class": {
+    "road_damage": {
+      "precision": 0.8846,
+      "recall": 0.9583,
+      "f1": 0.92,
+      "support": 24
+    },
+    "garbage_sanitation": {
+      "precision": 0.8571,
+      "recall": 0.75,
+      "f1": 0.8,
+      "support": 24
+    },
+    "streetlight_electrical": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "support": 24
+    },
+    "water_supply": {
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333,
+      "support": 24
+    },
+    "drainage_flooding": {
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333,
+      "support": 24
+    },
+    "other": {
+      "precision": 0.8,
+      "recall": 0.8333,
+      "f1": 0.8163,
+      "support": 24
+    }
+  },
+  "confusion_matrix_labels": [
+    "road_damage",
+    "garbage_sanitation",
+    "streetlight_electrical",
+    "water_supply",
+    "drainage_flooding",
+    "other"
+  ],
+  "confusion_matrix": [
+    [
+      23,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      18,
+      0,
+      0,
+      0,
+      5
+    ],
+    [
+      0,
+      0,
+      24,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      21,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      0,
+      21,
+      0
+    ],
+    [
+      1,
+      0,
+      3,
+      0,
+      0,
+      20
+    ]
+  ],
+  "num_errors": 17,
+  "errors": [
+    {
+      "id": "CMP_0827",
+      "true": "other",
+      "pred": "streetlight_electrical",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"streetlight_electrical\"}",
+      "text": "Severe ammonia gas leak from an unauthorized cold-storage plant right beside a dense residential colony\u2014residents choking and fainting!"
+    },
+    {
+      "id": "CMP_0835",
+      "true": "water_supply",
+      "pred": "streetlight_electrical",
+      "hard_case_type": "multi_issue",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"streetlight_electrical\"}",
+      "text": "High-pressure burst municipal water main is blasting directly onto an open live transformer outside Sector 10!"
+    },
+    {
+      "id": "CMP_0841",
+      "true": "other",
+      "pred": "streetlight_electrical",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"streetlight_electrical\"}",
+      "text": "Rusted overhead metallic welcome arch spanning Station Road has sheared welds on one leg and is sagging over passing buses."
+    },
+    {
+      "id": "CMP_0846",
+      "true": "water_supply",
+      "pred": "garbage_sanitation",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"garbage_sanitation\"}",
+      "text": "Dead rat pieces and black sewage sludge gushing straight out of the primary school drinking-water taps; dozens of kids fell violently ill!"
+    },
+    {
+      "id": "CMP_0849",
+      "true": "garbage_sanitation",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "dry leaves piled up near gate 2 of green park colony, please send sweeper"
+    },
+    {
+      "id": "CMP_0851",
+      "true": "drainage_flooding",
+      "pred": "garbage_sanitation",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"garbage_sanitation\"}",
+      "text": "Continuous raw sewage backup across 200 meters of Ward 15 chawl lanes for five days\u2014families cannot step out without wading through human waste."
+    },
+    {
+      "id": "CMP_0862",
+      "true": "garbage_sanitation",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "A small heap of garden trimmings was left neatly beside the colony park wall."
+    },
+    {
+      "id": "CMP_0865",
+      "true": "garbage_sanitation",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "Asbestos sheets and powdery toxic industrial dust dumped in huge open heaps right outside residential flats."
+    },
+    {
+      "id": "CMP_0870",
+      "true": "drainage_flooding",
+      "pred": "road_damage",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"road_damage\"}",
+      "text": "Roadside gully trap grill in Sector 2 is slightly crooked inside its concrete frame."
+    },
+    {
+      "id": "CMP_0874",
+      "true": "other",
+      "pred": "streetlight_electrical",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"streetlight_electrical\"}",
+      "text": "Leaning rusted street signboard pole outside the bakery tilts toward passing scooters."
+    },
+    {
+      "id": "CMP_0877",
+      "true": "garbage_sanitation",
+      "pred": "road_damage",
+      "hard_case_type": "category_boundary",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"road_damage\"}",
+      "text": "Rubble and mixed waste dumped on the unpaved shoulder beside the colony road, narrowing the walkway."
+    },
+    {
+      "id": "CMP_0887",
+      "true": "water_supply",
+      "pred": "streetlight_electrical",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"streetlight_electrical\"}",
+      "text": "Faint whining sound from the roadside air-release valve when the morning pipeline charges up."
+    },
+    {
+      "id": "CMP_0892",
+      "true": "other",
+      "pred": "road_damage",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"road_damage\"}",
+      "text": "Heavy concrete overhead welcome arch at the entrance of Gandhi Bazaar just fractured at both columns and is visibly tilting over rush-hour traffic!"
+    },
+    {
+      "id": "CMP_0905",
+      "true": "drainage_flooding",
+      "pred": "garbage_sanitation",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"garbage_sanitation\"}",
+      "text": "Mild sewer odour noticeable briefly when walking past the drainage chamber behind Block C."
+    },
+    {
+      "id": "CMP_0927",
+      "true": "garbage_sanitation",
+      "pred": "other",
+      "hard_case_type": "category_boundary",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "Small bag of household kitchen scraps left sitting beside a residential park tree."
+    },
+    {
+      "id": "CMP_0935",
+      "true": "road_damage",
+      "pred": "streetlight_electrical",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"streetlight_electrical\"}",
+      "text": "Thick jagged iron rods sticking vertically out of a collapsed highway divider directly in the fast lane."
+    },
+    {
+      "id": "CMP_0941",
+      "true": "garbage_sanitation",
+      "pred": "other",
+      "hard_case_type": "none",
+      "fallback_used": false,
+      "raw_output": "{\"category\": \"other\"}",
+      "text": "Wind blew some polythene bags against the chain-link fence of the community playground."
+    }
+  ]
+}

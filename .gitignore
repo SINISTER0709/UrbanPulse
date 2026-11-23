@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments & Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Node & Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment Variables & Secrets
+.env
+*.env
+!*.env.example
+!.env.example
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Large AI Models & Weights (exceeds GitHub 100MB limit)
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+other_tracks/Model/urbanpulse-llama-gguf/*.gguf
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

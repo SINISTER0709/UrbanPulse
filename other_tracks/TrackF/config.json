@@ -1,0 +1,79 @@
+{
+  "category_department_map": {
+    "road_damage": "Public Works",
+    "garbage_sanitation": "Sanitation & Solid Waste",
+    "streetlight_electrical": "Electrical & Street Lighting",
+    "water_supply": "Water Supply Department",
+    "drainage_flooding": "Stormwater & Drainage",
+    "other": "General Municipal Desk"
+  },
+  "priority": {
+    "weights": {
+      "S": 0.40,
+      "R": 0.20,
+      "T": 0.15,
+      "L": 0.15,
+      "E": 0.10
+    },
+    "severity_scores": {
+      "Low": 20,
+      "Medium": 45,
+      "High": 75,
+      "Critical": 100
+    },
+    "report_count_tiers": [
+      {"max_reports": 1, "score": 10},
+      {"max_reports": 3, "score": 30},
+      {"max_reports": 7, "score": 50},
+      {"max_reports": 15, "score": 75},
+      {"max_reports": 999999, "score": 100}
+    ],
+    "unresolved_days_tiers": [
+      {"max_days": 0.999, "score": 0},
+      {"max_days": 2.999, "score": 25},
+      {"max_days": 5.999, "score": 50},
+      {"max_days": 10.0, "score": 75},
+      {"max_days": 999999, "score": 100}
+    ],
+    "location_context_scores": {
+      "low_exposure": 20,
+      "residential": 40,
+      "market_arterial": 65,
+      "transit_hub": 80,
+      "school_access": 100,
+      "hospital_access": 100
+    },
+    "escalation_scores": {
+      "none": 0,
+      "mild": 30,
+      "moderate": 60,
+      "confirmed_worsening": 100
+    },
+    "poi_radius_meters": {
+      "school_access": 250,
+      "hospital_access": 300,
+      "transit_hub": 250,
+      "market_arterial": 200
+    },
+    "urgent_review_rules": {
+      "flag_on_severities": ["Critical"],
+      "flag_on_score_gte": 80.0,
+      "critical_keywords": [
+        "live wire", "electrocution", "sinkhole", "collapsed", "trapped",
+        "hospitalized", "rabid", "gas leak", "fire", "manhole cover missing",
+        "ambulance", "school gate"
+      ]
+    }
+  },
+  "deduplication": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "max_distance_meters": 250,
+    "time_window_days": 14,
+    "auto_link_similarity": 0.90,
+    "admin_review_similarity": 0.50
+  },
+  "hotspots": {
+    "dbscan_eps_meters": 400,
+    "dbscan_min_samples": 3
+  }
+}

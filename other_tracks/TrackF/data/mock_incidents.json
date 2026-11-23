@@ -1,0 +1,98 @@
+[
+  {
+    "id": "inc_42",
+    "category": "road_damage",
+    "summary_text": "Big deep pothole right outside ABC School gate blocking traffic during morning hours.",
+    "lat": 28.450757,
+    "lng": 77.58451,
+    "status": "open",
+    "priority": "high",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-20T08:15:00Z",
+    "updated_at": "2026-11-20T08:15:00Z"
+  },
+  {
+    "id": "inc_43",
+    "category": "road_damage",
+    "summary_text": "Broken asphalt crater near ABC School main avenue causing evening traffic slowdown.",
+    "lat": 28.44986,
+    "lng": 77.583714,
+    "status": "investigating",
+    "priority": "high",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-19T14:30:00Z",
+    "updated_at": "2026-11-19T16:00:00Z"
+  },
+  {
+    "id": "inc_44",
+    "category": "streetlight_electrical",
+    "summary_text": "Three street lamps outside ABC School road are completely dead after 7 PM.",
+    "lat": 28.45042,
+    "lng": 77.584554,
+    "status": "open",
+    "priority": "medium",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-20T19:00:00Z",
+    "updated_at": "2026-11-20T19:00:00Z"
+  },
+  {
+    "id": "inc_45",
+    "category": "road_damage",
+    "summary_text": "Large pothole outside ABC School gate reported last month.",
+    "lat": 28.450735,
+    "lng": 77.583934,
+    "status": "open",
+    "priority": "high",
+    "data_source": "user_submitted",
+    "created_at": "2026-10-20T09:00:00Z",
+    "updated_at": "2026-10-20T09:00:00Z"
+  },
+  {
+    "id": "inc_46",
+    "category": "road_damage",
+    "summary_text": "Pothole outside ABC School repaired and closed.",
+    "lat": 28.450375,
+    "lng": 77.5842,
+    "status": "resolved",
+    "priority": "medium",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-18T11:00:00Z",
+    "updated_at": "2026-11-19T17:00:00Z"
+  },
+  {
+    "id": "inc_47",
+    "category": "garbage_sanitation",
+    "summary_text": "Overflowing municipal dumpster outside Jagat Farm vegetable market stinking for 4 days.",
+    "lat": 28.4812,
+    "lng": 77.5056,
+    "status": "open",
+    "priority": "high",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-20T07:00:00Z",
+    "updated_at": "2026-11-20T07:00:00Z"
+  },
+  {
+    "id": "inc_48",
+    "category": "water_supply",
+    "summary_text": "Main drinking water pipeline burst near Pari Chowk roundabout gushing clean water.",
+    "lat": 28.4653,
+    "lng": 77.5105,
+    "status": "in_progress",
+    "priority": "high",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-21T06:30:00Z",
+    "updated_at": "2026-11-21T08:00:00Z"
+  },
+  {
+    "id": "inc_49",
+    "category": "drainage_flooding",
+    "summary_text": "Missing manhole cover on Alpha Commercial Belt main road, deep open sewer shaft.",
+    "lat": 28.4744,
+    "lng": 77.514,
+    "status": "open",
+    "priority": "critical",
+    "data_source": "user_submitted",
+    "created_at": "2026-11-21T05:15:00Z",
+    "updated_at": "2026-11-21T05:15:00Z"
+  }
+]

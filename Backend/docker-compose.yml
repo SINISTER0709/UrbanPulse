@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  urbanpulse_db:
+    image: postgis/postgis:15-3.4
+    container_name: urbanpulse_postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: urbanpulse
+      POSTGRES_PASSWORD: urbanpulse_secret
+      POSTGRES_DB: urbanpulse_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - urbanpulse_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U urbanpulse -d urbanpulse_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - urbanpulse_net
+
+  urbanpulse_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: urbanpulse_backend
+    restart: unless-stopped
+    depends_on:
+      urbanpulse_db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://urbanpulse:urbanpulse_secret@urbanpulse_db:5432/urbanpulse_db
+      JWT_SECRET: urbanpulse_super_secret_jwt_key_change_in_production_9876543210_token
+      JWT_ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 1440
+      UPLOAD_DIR: ./uploads
+      ENVIRONMENT: production
+    ports:
+      - "8080:8000"
+    volumes:
+      - urbanpulse_uploads:/app/uploads
+    networks:
+      - urbanpulse_net
+
+volumes:
+  urbanpulse_pgdata:
+    driver: local
+  urbanpulse_uploads:
+    driver: local
+
+networks:
+  urbanpulse_net:
+    driver: bridge
