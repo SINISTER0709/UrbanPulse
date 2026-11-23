@@ -1,6 +1,8 @@
 import axios from 'axios';
-export const MOCK=import.meta.env.VITE_USE_MOCK==='true';
-const http=axios.create({baseURL:'/api'});
+export const MOCK =
+  import.meta.env.VITE_USE_MOCK === 'true' ||
+  (typeof window !== 'undefined' && window.location.hostname.includes('github.io'));
+const http = axios.create({ baseURL: import.meta.env.VITE_API_URL || '/api' });
 http.interceptors.request.use(c=>{const t=localStorage.getItem('up_token');if(t)c.headers.Authorization='Bearer '+t;return c});
 const wait=(v:any)=>new Promise<any>(r=>setTimeout(()=>r(v),150));const iso=(h:number)=>new Date(Date.now()-h*36e5).toISOString();
 const mk=(id:string,category:string,severity:string,score:number,urgent:boolean,status:string,summary:string,lat:number,lng:number,h:number,b:any,reports:any[]=[],dept?:string)=>({id,category,severity,priority:severity.toLowerCase(),priority_score:score,urgent_review_flag:urgent,score_breakdown:b,status,summary_text:summary,location:{latitude:lat,longitude:lng},created_at:iso(h),reports:[{id:'rpt_'+id.slice(-3),description:summary,latitude:lat,longitude:lng,status:'triaged',created_at:iso(h)},...reports],assignments:dept?[{id:'asgn_'+id,department_name:dept,status:'pending'}]:[],admin_reviews:[]});
